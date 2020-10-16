@@ -84,6 +84,7 @@ function drawScore() {
 	cntxt.fillText(score, canvas.width - 70, 30);
 }
 function gameOver() {
+	startGameBtn.disabled = false;
 	cntxt.font = '50px Verdana'
 	cntxt.fillText("GAME OVER", canvas.width / 2 - 140, canvas.height / 2 + 20);
 	if (gameRunning) {
@@ -110,7 +111,6 @@ function gameOver() {
 				document.querySelector("ul").appendChild($li);
 			})
 		});
-		startGameBtn.disabled = false;
 	}
 	// POP UP SOME WINDOW WITH A LEADERBOARD OF ALL HIGHSCORES
 }
